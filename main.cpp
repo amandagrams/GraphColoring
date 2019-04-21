@@ -14,8 +14,6 @@ using namespace std;
 
 #include "include/ag.h"
 
-// gcc seucodigo.c -o seuprograma.run
-
 class Grafo
 {
 private:
@@ -153,17 +151,14 @@ int main(int argc, char *argv[])
 
     unsigned int total_iteracoes = 0, max_iteracoes = 100000;
 
-    //Genetic Algorithm
-
-    //Values for the Genetic Algorithm
-    //max_iteracoes = 100000;
-    max_iteracoes = 15000;
+    max_iteracoes = 100000;
     int n_individuos = 20;
     double p_melhor = 40.0, p_cross = 40.0, p_mutacao = 20.0;
     int min_cores = 0;
     cout << VERMELHO << "\n\n\n\n========================================" << endl;
     cout << VERMELHO << "  ALGORITMO GENÉTICO - RODANDO SOLUÇÃO " << endl;
-    cout << VERMELHO << "========================================\n\n\n\n"  << FIM << endl;
+    cout << VERMELHO << "========================================\n\n\n\n"
+         << FIM << endl;
 
     AG AG_Solucao(n_individuos, grafo_principal.getNos(), grafo_principal.getArestas(), grafo_principal.getGrafo());
     AG_Solucao.MainLoop(max_iteracoes, total_iteracoes, p_melhor, p_cross, p_mutacao, min_cores);

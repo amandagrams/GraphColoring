@@ -69,10 +69,10 @@ void Individuo::mutate()
     this->fitness = 0;
     double max_iteracoes = n_genes / 2;
 
-    //cout << "colours: "<< colours/2 << endl;
+   
     unsigned int random_a = this->getRandom(1.0, max_iteracoes);
     unsigned int random_b;
-    //cout << "random_a: "<< random_a << endl;
+    
 
     for (unsigned int i = 0; i < random_a; i++)
     {
